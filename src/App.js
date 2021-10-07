@@ -29,6 +29,7 @@ function App() {
       .then((res) => {
               setUser(user)
               isLogin(true)
+              toast.success('login success fully')
       })
       .catch((error) => console.log(error))
   }
@@ -53,7 +54,7 @@ function App() {
         {isLogin ? 
           <>
               <div>
-                <Title />
+                <Title logoutUser={logoutUser}/>
               </div>
               <div className="form-wrapper">
                 <Form />

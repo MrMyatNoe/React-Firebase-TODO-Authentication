@@ -1,4 +1,5 @@
 import { useState } from "react"
+import { toast } from "react-toastify";
 import {firebaseApp} from '../lib/firebase'
 
 export default function Form(){
@@ -13,6 +14,15 @@ export default function Form(){
             completed: false
          }
         todoRef.push(todo)
+        toast('🦄 Wow so easy!', {
+            position: "top-right",
+            autoClose: 5000,
+            hideProgressBar: false,
+            closeOnClick: true,
+            pauseOnHover: true,
+            draggable: true,
+            progress: undefined,
+            });
     }
 
     const handleChange = (e) => {
